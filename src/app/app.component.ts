@@ -19,7 +19,7 @@ declare let $: any;
 export class AppComponent implements OnInit {
     location: any;
     routerSubscription: any;
-	title:string = 'opvix-ng';
+	title:string = 'Dam Pharm';
     constructor(private router: Router,private translate: TranslateService) {
         localStorage.setItem('lang','ar');
         translate.setDefaultLang(localStorage.getItem('lang'));

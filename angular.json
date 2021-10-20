@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "opvix-ng": {
+    "dampharm": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/opvix-ng",
+            "outputPath": "dist/dampharm",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -87,18 +87,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "opvix-ng:build"
+            "browserTarget": "dampharm:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "opvix-ng:build:production"
+              "browserTarget": "dampharm:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "opvix-ng:build"
+            "browserTarget": "dampharm:build"
           }
         },
         "test": {
@@ -136,18 +136,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "opvix-ng:serve"
+            "devServerTarget": "dampharm:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "opvix-ng:serve:production"
+              "devServerTarget": "dampharm:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "opvix-ng",
+  "defaultProject": "dampharm",
   "cli": {
     "analytics": "34e0bc26-e209-439d-837c-084181a91c5f"
   }
