@@ -1,0 +1,194 @@
+<div class="page-title-area page-title-one">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="page-title-item">
+                <h2>Conoce a nuestro equipo calificado</h2>
+                <ul>
+                    <li><a routerLink="/">Inicio</a></li>
+                    <li><i class="icofont-simple-right"></i></li>
+                    <li>Especialistas</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="doctor-search-area">
+    <div class="container">
+        <form>
+            <div class="row doctor-search-wrap">
+                <div class="col-sm-6 col-lg-6">
+                    <div class="doctor-search-item">
+                        <div class="form-group">
+                            <i class="icofont-doctor-alt"></i>
+                            <label>Search</label>
+                            <input type="text" class="form-control" placeholder="Doctor Name">
+                        </div>
+
+                        <button type="submit" class="btn doctor-search-btn">
+                            <i class="icofont-search-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-6">
+                    <div class="doctor-search-item">
+                        <div class="form-group">
+                            <i class="icofont-hospital"></i>
+                            <label>Category</label>
+
+                            <select class="form-control">
+                                <option>Neurosurgeon</option>
+                                <option>Cardiology</option>
+                                <option>Pathology</option>
+                                <option>Dental Care</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>-->
+
+<section class="doctors-area doctors-area-two pt-100">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+				<div class="doctor-item">
+                    <div class="doctor-top">
+                        <img src="assets/img/doctor/draanabel.jpg" alt="Doctor">
+                        	<a (click)="assignDentist(dentistNames.dentistAnabel); passDentist()">Mas Informacion</a>
+                    </div>
+
+                    <div class="doctor-bottom">
+                        <h3><a (click)="assignDentist(dentistNames.dentistAnabel); passDentist()">
+								Dra. Anabel Argueta</a></h3>
+                        <span>Especialista en Estetica/Endodoncista</span>
+                    </div>
+                </div>
+            </div>            
+
+            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".5s">
+                <div class="doctor-item">
+                    <div class="doctor-top">
+                        <img src="assets/img/doctor/drapamela.jpg" alt="Doctor">
+                        	
+							<a (click)="assignDentist(dentistNames.dentistPamela); passDentist()">
+								Mas Informacion</a>
+                    </div>
+
+                    <div class="doctor-bottom">
+                        <h3><a (click)="assignDentist(dentistNames.dentistPamela); passDentist()">Dra. Pamela Escoto</a></h3>
+                        <span>Ortodoncista y Ortopeda Maxilofacial</span>
+                    </div>
+                </div>            
+			</div>
+
+            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".7s">
+                <div class="doctor-item">
+                    <div class="doctor-top">
+                        <img src="assets/img/doctor/dranadia.jpg" alt="Doctor">
+                        <a (click)="assignDentist(dentistNames.dentistNadia); passDentist()" 
+						   >Mas Informacion
+						</a>
+                    </div>		
+
+                    <div class="doctor-bottom">
+                        <h3><a (click)="assignDentist(dentistNames.dentistNadia); passDentist()">
+								Dra. Nadia Irias</a></h3>
+                        <span>Cirugia Oral y Maxilofacial</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                <div class="doctor-item">
+                    <div class="doctor-top">
+                        <img src="assets/img/doctor/draDiana.jpg" alt="Doctor">
+
+                        <a (click)="assignDentist(dentistNames.dentistDiana); passDentist()"
+						   >Mas Informacion</a>
+                    </div>
+
+                    <div class="doctor-bottom">
+                        <h3><a (click)="assignDentist(dentistNames.dentistDiana); passDentist()" 
+						   >Dra. Diana Anchecta</a></h3>
+                        <span>Odontopediatra</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".5s">
+                <div class="doctor-item">
+                    <div class="doctor-top">
+                        <img src="assets/img/doctor/drluis.jpg" alt="Doctor">
+						<a (click)="assignDentist(dentistNames.dentistLuis); passDentist()"
+						    >Mas Informacion</a>
+                    </div>
+
+                    <div class="doctor-bottom">
+                        <h3><a (click)="assignDentist(dentistNames.dentistLuis); passDentist()"
+							>Dr. Luis Moncada</a></h3>
+                        <span>Ortodoncista y Ortopeda Maxilofacial</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".7s">
+                <div class="doctor-item">
+                    <div class="doctor-top">
+                        <img src="assets/img/doctor/drasamantha.jpg" alt="Doctor">
+							<!-- routerLink -->
+                       <a (click)="assignDentist(dentistNames.dentistSamanta); passDentist()" 
+						   >
+								Mas Informacion</a>
+                    </div>
+
+                    <div class="doctor-bottom">
+                        <h3><a routerLink="/doctor-details" (click)="assignDentist(dentistNames.dentistSamanta); passDentist()" 
+						>
+								Dra. Samanta Espinoza</a></h3>
+                        <span>Odontologa General</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                <div class="doctor-item">
+                    <div class="doctor-top">
+                        <img src="assets/img/doctor/draViera.jpg" alt="Doctor">
+
+                       <a (click)="assignDentist(dentistNames.dentistPahola); passDentist()"
+						   >Mas Informacion</a>
+                    </div>
+
+                    <div class="doctor-bottom">
+                        <h3><a (click)="assignDentist(dentistNames.dentistPahola); passDentist()" 
+						   >Dra. Pahola Viera</a></h3>
+                        <span>Odontologa General</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".5s">
+                <div class="doctor-item">
+                    <div class="doctor-top">
+                        <img src="assets/img/doctor/draSohad.jpg" alt="Doctor">
+
+                        <a (click)="assignDentist(dentistNames.dentistSohad); passDentist()" 
+						   >Mas Informacion</a>
+                    </div>
+
+                    <div class="doctor-bottom">
+                        <h3><a (click)="assignDentist(dentistNames.dentistSohad); passDentist()" 
+						   >
+								Dra. Sohad Aguilera</a></h3>
+                        <span>Odontologa General</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

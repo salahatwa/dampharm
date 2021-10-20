@@ -1,0 +1,81 @@
+<div class="page-title-area page-title-three">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="page-title-item-two">
+                <h2 *ngIf="dentist.dentistName">
+					{{dentist.dentistName}}
+				</h2>
+                <h3 *ngIf="dentist.dentistSpecialty">
+					{{dentist.dentistSpecialty}}
+				</h3>
+                <p *ngIf="dentist.dentistSpecialtyInstitution">{{dentist.dentistSpecialtyInstitution}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="doctor-details-area pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="doctor-details-item doctor-details-left">
+                    <img src="{{dentist.dentistImage}}" alt="Doctor">
+
+                    <div class="doctor-details-contact">
+                        <h3>Informacion de Contacto</h3>
+                        <ul>
+                            <li><i class="icofont-ui-call"></i>{{evaluateClinic(dentist.dentistClinic1)}}</li>
+                            <li><i class="icofont-ui-message"></i> dentalstudiohon@gmail.com</li>
+                            <li><i class="icofont-location-pin"></i>{{dentist.dentistClinic1}}</li>
+                        </ul>
+                    </div>
+
+                    <div class="doctor-details-work">
+                        <h3>Horas de Trabajo</h3>
+                        <div class="appointment-item-two-right">
+                            <div class="appointment-item-content">
+                                <div class="content-one">
+                                    <ul>
+                                        <li>Lunes</li>
+                                        <li>Martes</li>
+                                        <li>Miercoles</li>
+                                        <li>Jueves</li>
+                                    	<li>Viernes</li>
+										<li>Sabado</li>
+									</ul>
+                                </div>
+                                <div class="content-two">
+                                    <ul>
+                                        <li>9:00 am - 8:00 pm</li>
+                                        <li>9:00 am - 8:00 pm</li>
+                                        <li>9:00 am - 8:00 pm</li>
+                                        <li>9:00 am - 8:00 pm</li>
+                                    	<li>9:00 am - 8:00 pm</li>
+										<li>9:00 am - 8:00 pm</li>
+									</ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="doctor-details-item">
+                    <div class="doctor-details-right">
+                        <div class="doctor-details-biography">
+                            <h3>Biografia</h3>
+                            <p>{{dentist.dentistBio}}</p><br>
+                        </div>
+
+                        <div *ngIf="dentist.dentistCourses" class="doctor-details-biography">
+                            <h3>Education</h3>
+                            <p>{{dentist.dentistCourses}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
