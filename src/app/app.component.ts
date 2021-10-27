@@ -3,6 +3,7 @@ import { Router, NavigationStart, NavigationCancel, NavigationEnd } from '@angul
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { filter } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
+import { DentistserviceService } from './dentistservice.service';
 declare let $: any;
 
 @Component({
@@ -20,12 +21,13 @@ export class AppComponent implements OnInit {
     location: any;
     routerSubscription: any;
 	title:string = 'Dam Pharm';
-    constructor(private router: Router,private translate: TranslateService) {
+    constructor(private router: Router,private translate: TranslateService,private dampharmService:DentistserviceService) {
         localStorage.setItem('lang','ar');
         translate.setDefaultLang(localStorage.getItem('lang'));
     }
 
     ngOnInit(){
+        this.dampharmService.getDamPharmInfos();
         this.recallJsFuntions();
     }
 

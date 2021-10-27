@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DamPharm, Product } from 'src/app/Dentist';
+import { DentistserviceService } from 'src/app/dentistservice.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  dampharm: DamPharm;
+  year = new Date().getFullYear();
+
+  constructor(private dampharmService: DentistserviceService) { }
 
   ngOnInit(): void {
+    this.dampharmService.currentUser.subscribe((data) => {
+      this.dampharm = data;
+    });
   }
+
+  getName(product: Product) {
+    if (localStorage.getItem('lang') == 'ar')
+      return product?.nameAr;
+    else
+      return product?.nameEn;
+
+  }
+
 
 }

@@ -1,10 +1,16 @@
-$common-font: 'Poppins', ;
+$common-font: 'Poppins','Cairo', sans-serif;
 $transition: .5s all ease;
 $all-size: 15px;
 $white-color: #ffffff;
 $grey-color: #4a6f8a;
 $blue-color: #0046c0;
 $black-color: #111111;
+
+.mat-h3, .mat-subheading-2, .mat-typography h3 {
+  font: $common-font;
+    letter-spacing: normal;
+    margin: 0 0 16px;
+}
 
 /*-- Default CSS --*/
 body {

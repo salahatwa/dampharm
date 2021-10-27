@@ -1,4 +1,21 @@
 {
-    "demo.title": "Translation demo",
-    "demo.text": "This is a simple demonstration app for ngx-translate"
-  }
+    "demo.title": "Dam Pharm",
+    "home": "Home",
+    "aboutUs": "About us",
+    "contactUs": "Contact us",
+    "specialists": "Specialists",
+    "services": "Products",
+    "mission": "Mission and vision",
+    "missionDes": "Our world-class technology to ensure that you and your smile are known wherever you go!",
+    "personalize": "Personalized service",
+    "personalizeDesc": "We have a medical representative in all Cities of Egypt to provide you with the best possible service!",
+    "orderNow": "Order our products now",
+    "moreInfo": "More Info",
+    "homeDesc": "Our mission in Dam Pharm is to design a professional smile, as we provide high quality products with the latest technology, relying on our representatives in different governorates, so that our client gets comprehensive products for their needs, thus improving their self-confidence and opening an additional door to success through their new smile",
+    "phone": "Phone",
+    "email":"Email",
+    "address":"Address",
+    "quik":"Quick Search",
+    "freq":"Frequently Asked Questions",
+    "qualified":"Meet our qualified team"
+}

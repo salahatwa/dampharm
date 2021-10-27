@@ -1,4 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Cairo', sans-serif !important; }
+
+.mat-h1,
+.mat-headline,
+.mat-typography h1 {
+    font: 400 24px/32px 'Cairo', sans-serif !important;
+    letter-spacing: normal;
+    margin: 0 0 16px;
+}
+
+.mat-h3,
+.mat-subheading-2,
+.mat-typography h3 {
+  font: "Cairo", sans-serif !important;
+  letter-spacing: normal;
+  margin: 0 0 16px;
+}

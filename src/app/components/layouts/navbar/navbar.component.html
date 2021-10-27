@@ -5,12 +5,31 @@
                 <div class="header-top-item">
                     <div class="header-top-left">
                         <ul>
-                            <li><a href="tel:+504 32216104"><i class="icofont-ui-call"></i> Llamar: +504 3231-6104</a></li>
-                            <li><a href="dentalstudiohon@gmail.com"><i class="icofont-ui-message"></i> dentalstudiohon@gmail.com</a>
+                            <ng-container
+                                *ngFor="let phone of dampharm?.phones"
+                            >
+                                <a
+                                    href="https://api.whatsapp.com/send?phone={{
+                                        phone?.code
+                                    }} {{
+                                        phone?.mob
+                                    }}&amp;text=I%27m%20interested%20in%20Dam%20Pharm%20Products"
+                                    ><i class="icofont-ui-call"></i>
+                                    {{ phone?.code }} {{ phone?.mob }}
+                                </a>
+                            </ng-container>
+
+                            <li>
+                                <a href="mailto:{{ dampharm?.email }}"
+                                    ><i class="icofont-ui-message"></i>
+                                      {{ dampharm?.email }}
+                                </a>
                             </li>
-                            <li><i class="icofont-location-pin"></i> 205B Mall La Galeria, Tegucigalpa M.D.C., Francisco Morazan </li>
-                        	<li><i class="icofont-location-pin"></i> Mall Multiplaza, Tegucigalpa M.D.C, Francisco Morazan </li>
-						</ul>
+                            <li>
+                                <i class="icofont-location-pin"></i>
+                                {{ dampharm?.address }}
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -19,9 +38,25 @@
                 <div class="header-top-item">
                     <div class="header-top-right">
                         <ul>
-                            <li><a href="https://www.facebook.com/dentalstudiohn" target="_blank"><i class="icofont-facebook"></i></a></li>
-                            <li><a href="https://www.instagram.com/dentalstudiohn" target="_blank"><i class="icofont-instagram"></i></a></li>               
-                            <li><a (click)="useLanguage()"><i class="icofont-instagram"></i></a></li>                             
+                            <li>
+                                <a
+                                    href="https://www.facebook.com/dentalstudiohn"
+                                    target="_blank"
+                                    ><i class="icofont-facebook"></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.instagram.com/dentalstudiohn"
+                                    target="_blank"
+                                    ><i class="icofont-instagram"></i
+                                ></a>
+                            </li>
+                            <li>
+                                <a (click)="useLanguage()"
+                                    ><i class="icofont-instagram"></i
+                                ></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -38,16 +73,33 @@
     <div class="main-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" routerLink="/"><img class="small-logo" src="assets/img/transparentlogo.png" alt="Logo"></a>
+                <a class="navbar-brand" routerLink="/"
+                    ><img
+                        class="small-logo"
+                        src="assets/img/transparentlogo.png"
+                        alt="Logo"
+                /></a>
 
-                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                <div
+                    class="collapse navbar-collapse mean-menu"
+                    id="navbarSupportedContent"
+                >
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="javascript:void(0)" routerLink="/">Inicio</a>
-
+                            <a href="javascript:void(0)" routerLink="/">{{
+                                "home" | translate
+                            }}</a>
                         </li>
 
-                        <li class="nav-item"><a routerLink="/about" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Acerca de nosotros</a></li>
+                        <li class="nav-item">
+                            <a
+                                routerLink="/about"
+                                class="nav-link"
+                                routerLinkActive="active"
+                                [routerLinkActiveOptions]="{ exact: true }"
+                                >{{ "aboutUs" | translate }}</a
+                            >
+                        </li>
 
                         <!--<li class="nav-item">
                             <a href="javascript:void(0)" class="nav-link dropdown-toggle">Pages</a>
@@ -73,32 +125,64 @@
 
                                 <li class="nav-item"><a routerLink="/coming-soon" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Coming Soon</a></li>
                             </ul>
-                        </li>-->          
-                        <li class="nav-item">   
-							
-	
-                            <a routerLink="/services" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Servicios</a>
+                        </li>-->
+                        <li class="nav-item">
+                            <a
+                                routerLink="/services"
+                                class="nav-link"
+                                routerLinkActive="active"
+                                [routerLinkActiveOptions]="{ exact: true }"
+                                >{{ "services" | translate }}</a
+                            >
                         </li>
 
                         <li class="nav-item">
-                            <a routerLink="/doctor" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Especialistas</a>
-                            
+                            <a
+                                routerLink="/doctor"
+                                class="nav-link"
+                                routerLinkActive="active"
+                                [routerLinkActiveOptions]="{ exact: true }"
+                                >{{ "specialists" | translate }}</a
+                            >
                         </li>
 
-                        <li class="nav-item"><a routerLink="/contact" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact:true}">Contactanos</a></li>
-
+                        <li class="nav-item">
+                            <a
+                                routerLink="/contact"
+                                class="nav-link"
+                                routerLinkActive="active"
+                                [routerLinkActiveOptions]="{ exact: true }"
+                                >{{ "contactUs" | translate }}</a
+                            >
+                        </li>
                     </ul>
 
                     <div class="nav-srh">
                         <div class="search-toggle">
-                            <button class="search-icon icon-search"><i class="icofont-search-1"></i></button>
-                            <button class="search-icon icon-close"><i class="icofont-close"></i></button>
+                            <button class="search-icon icon-search">
+                                <i class="icofont-search-1"></i>
+                            </button>
+                            <button class="search-icon icon-close">
+                                <i class="icofont-close"></i>
+                            </button>
                         </div>
-                        
+
                         <div class="search-area">
                             <form>
-                                <input type="text" class="src-input" id="search-terms" placeholder="Search here..." />
-                                <button type="submit" name="submit" value="Go" class="search-icon"><i class="icofont-search-1"></i></button>
+                                <input
+                                    type="text"
+                                    class="src-input"
+                                    id="search-terms"
+                                    placeholder="Search here..."
+                                />
+                                <button
+                                    type="submit"
+                                    name="submit"
+                                    value="Go"
+                                    class="search-icon"
+                                >
+                                    <i class="icofont-search-1"></i>
+                                </button>
                             </form>
                         </div>
                     </div>
