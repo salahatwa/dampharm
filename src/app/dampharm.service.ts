@@ -2,12 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, ReplaySubject } from 'rxjs';
 import { distinctUntilChanged } from 'rxjs/operators';
-import { DamPharm, Dentist } from './Dentist';
+import { DamPharm, Dentist } from './dampharm.model';
 
 @Injectable({
 	providedIn: 'root'
 })
-export class DentistserviceService {
+export class DamPharmService {
 
 	private currentUserSubject = new BehaviorSubject<DamPharm>({} as DamPharm);
 	public currentUser = this.currentUserSubject.asObservable().pipe(distinctUntilChanged());
@@ -57,7 +57,8 @@ export class DentistserviceService {
 
 
 
-	private _url = 'https://res.cloudinary.com/genhub/raw/upload/v1635343630/dampharm.json';
+	// private _url = 'https://res.cloudinary.com/genhub/raw/upload/v1635343630/dampharm.json';
+	private _url = "./assets/dampharm.json";
 
 	getDamPharmInfos() {
 		return this._http.get(this._url).subscribe((data) => {

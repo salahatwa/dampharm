@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DamPharm, Employee } from 'src/app/Dentist';
-import { DentistserviceService } from 'src/app/dentistservice.service';
+import { DamPharm, Employee } from './../../../dampharm.model';
+import { DamPharmService } from './../../../dampharm.service';
 
 @Component({
   selector: 'app-doctor-details',
@@ -13,7 +13,7 @@ export class DoctorDetailsComponent implements OnInit {
   dampharm: DamPharm;
   doctor: Employee;
 
-  constructor(private route: ActivatedRoute, private dampharmService: DentistserviceService) {
+  constructor(private route: ActivatedRoute, private dampharmService: DamPharmService) {
 
   }
 

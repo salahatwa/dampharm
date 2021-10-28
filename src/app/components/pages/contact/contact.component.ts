@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DamPharm } from 'src/app/Dentist';
-import { DentistserviceService } from 'src/app/dentistservice.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DamPharm } from './../../../dampharm.model';
+import { DamPharmService } from './../../../dampharm.service';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +12,7 @@ export class ContactComponent implements OnInit {
   dampharm: DamPharm;
   url:SafeResourceUrl;
 
-  constructor(private dampharmService: DentistserviceService,public sanitizer:DomSanitizer) { }
+  constructor(private dampharmService: DamPharmService,public sanitizer:DomSanitizer) { }
 
   ngOnInit(): void {
     this.dampharmService.currentUser.subscribe((data) => {

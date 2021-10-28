@@ -45,11 +45,11 @@
                                     "aboutUs" | translate
                                 }}</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a routerLink="/faq">{{
                                     "freq" | translate
                                 }}</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a routerLink="/doctor">{{
                                     "specialists" | translate
@@ -70,7 +70,7 @@
                         <h3>{{ "services" | translate }}</h3>
                         <ul *ngFor="let product of dampharm?.products">
                             <li>
-                               {{getName(product)}}
+                               <a routerLink="/faq">{{getName(product)}}</a>
                             </li>
                         </ul>
                     </div>

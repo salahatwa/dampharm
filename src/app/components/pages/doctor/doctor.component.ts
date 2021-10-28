@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DamPharm } from 'src/app/Dentist';
-import { DentistserviceService } from 'src/app/dentistservice.service';
+import { DamPharm } from './../../../dampharm.model';
+import { DamPharmService } from './../../../dampharm.service';
 
 @Component({
   selector: 'app-doctor',
@@ -11,7 +11,7 @@ import { DentistserviceService } from 'src/app/dentistservice.service';
 export class DoctorComponent implements OnInit {
 
 
-  constructor(private dampharmService: DentistserviceService, private router: Router) {
+  constructor(private dampharmService: DamPharmService, private router: Router) {
 
   }
 
