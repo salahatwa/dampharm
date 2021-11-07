@@ -1,0 +1,77 @@
+<div class="page-title-area page-title-three">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="page-title-item-two">
+                <h2 *ngIf="product?.nameEn">
+					{{product?.nameEn}}
+				</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="doctor-details-area pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="doctor-details-item doctor-details-left">
+                    <img src="{{product?.img}}" alt="product">
+
+                    <div class="doctor-details-contact">
+                        <h3>DamPharm Contact information</h3>
+                        <ul>
+                         
+                            <li><i class="icofont-ui-message"></i>  <a href="mailto:{{ dampharm?.email }}">{{
+                                dampharm?.email
+                            }}</a></li>
+                            <!-- <li><i class="icofont-location-pin"></i>{{dentist.dentistClinic1}}</li>  -->
+                        </ul>
+
+                        <ul *ngFor="let phone of dampharm?.phones">
+                            <li>
+                                <a
+                                    href="https://api.whatsapp.com/send?phone={{
+                                        phone?.code
+                                    }} {{
+                                        phone?.mob
+                                    }}&amp;text=I%27m%20interested%20in%20Dam%20Pharm%20Products"
+                                    ><i class="icofont-ui-call"></i> {{ phone?.code }} {{ phone?.mob }}</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="doctor-details-work">
+                        <h3>Contains</h3>
+                        <div class="appointment-item-two-right">
+                            <div class="appointment-item-content">
+                                <div>
+                                    <ul *ngFor="let subItem of product?.contains">
+                                        <li>{{subItem}}</li>
+									</ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="doctor-details-item">
+                    <div class="doctor-details-right">
+                        <div class="doctor-details-biography">
+                            <h3>Description</h3>
+                            <p>{{product?.descEn}}</p><br>
+                        </div>
+
+                        <div *ngIf="product?.contains" class="doctor-details-biography">
+                            <h3>Contains</h3>
+                            <p>{{product?.contains}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -40,11 +40,11 @@
                             "quik" | translate
                         }}</h3>
                         <ul>
-                            <li>
+                            <!-- <li>
                                 <a routerLink="/about">{{
                                     "aboutUs" | translate
                                 }}</a>
-                            </li>
+                            </li> -->
                             <!-- <li>
                                 <a routerLink="/faq">{{
                                     "freq" | translate
@@ -68,9 +68,10 @@
                 <div class="footer-item">
                     <div class="footer-quick">
                         <h3>{{ "services" | translate }}</h3>
-                        <ul *ngFor="let product of dampharm?.products">
+                        <ul *ngFor="let item of dampharm?.products">
                             <li>
-                               <a routerLink="/faq">{{getName(product)}}</a>
+                               <a   [queryParams]="{ name: item?.slug }"
+                               [routerLink]="['/product-details']">{{getName(item)}}</a>
                             </li>
                         </ul>
                     </div>

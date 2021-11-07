@@ -8,6 +8,7 @@ import { ServicesComponent } from './components/pages/services/services.componen
 import { DoctorComponent } from './components/pages/doctor/doctor.component';
 import { DoctorDetailsComponent } from './components/pages/doctor-details/doctor-details.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
+import { ServiceDetailsComponent } from './components/pages/services/service-details/service-details.component';
 
 const routes: Routes = [
     {path: '', component: HomeOneComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
     {path: 'error', component: ErrorComponent},
     {path: 'coming-soon', component: ComingSoonComponent},
     {path: 'services', component: ServicesComponent},
+    {path: 'product-details', component: ServiceDetailsComponent},
     {path: 'doctor', component: DoctorComponent},
     {path: 'doctor-details', component: DoctorDetailsComponent},
     {path: 'contact', component: ContactComponent},

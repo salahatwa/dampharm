@@ -49,8 +49,11 @@ export class Phone {
 }
 
 export class Product {
+	slug?:string;
 	nameAr?: string;
 	nameEn?: string;
 	descAr?: string;
 	descEn?: string;
+	contains?:[];
+	img:string;
 }

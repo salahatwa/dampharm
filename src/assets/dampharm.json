@@ -1,41 +1,47 @@
 {
-  "phones": [
-    {
-      "code": "+20",
-      "mob": "1062615954"
-    },
-    {
-      "code": "+966",
-      "mob": "549168065"
-    }
-  ],
-  "email": "dampharm.eg@gmail.com",
-  "address": "Banha,Qaliybia",
-  "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d859.7286477799402!2d31.185941829141907!3d30.46685715478691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDI4JzAwLjciTiAzMcKwMTEnMTEuNCJF!5e0!3m2!1sen!2seg!4v1635332431133!5m2!1sen!2seg",
-  "products": [
-    {
-      "nameAr": "دام لايت",
-      "nameEn": "Dam Light",
-      "descAr": "",
-      "descEn": ""
-    },
-    {
-      "nameAr": "فلورو دام",
-      "nameEn": "Floro Dam",
-      "descAr": "",
-      "descEn": ""
-    }
-  ],
-  "employees":[
-      {
-          "id":"1234",
-          "name":"Mahmoud Atwa",
-          "position":"CEO & Sales Manger",
-          "about":"With more than 10 years of experience, time in which he has changed lives through new smiles on people that useing dam pharm products. Atwa is  updated him self on the latest beauty & health products technology. Atwa apart from being passionate about his professional career, he also enjoys his free time with his family, wife and 2 children",
-          "education":"BS. of Science , Faculty of Benha",
-          "email":"mahmoudsayedatwa@gmail.com",
-          "address":"Bajour / Monifia",
-          "img":"https://res.cloudinary.com/genhub/image/upload/v1635410190/atwa2_s9ii2v.png"
-      }
-  ]
+    "phones": [
+        {
+            "code": "+20",
+            "mob": "1062615954"
+        },
+        {
+            "code": "+966",
+            "mob": "549168065"
+        }
+    ],
+    "email": "dampharm.eg@gmail.com",
+    "address": "Banha,Qaliybia",
+    "location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d859.7286477799402!2d31.185941829141907!3d30.46685715478691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDI4JzAwLjciTiAzMcKwMTEnMTEuNCJF!5e0!3m2!1sen!2seg!4v1635332431133!5m2!1sen!2seg",
+    "products": [
+        {
+            "slug":"DamLight",
+            "nameAr": "دام لايت",
+            "nameEn": "Dam Light",
+            "descAr": "يحتوى على فيتامين سى ، مضاد للأكسدة ، محارب الشيخوخه والتجاعيد والخطوط الدقيقة ، يزيد من نضارة البشره ، المساهمه في علاج الهالات السوداء ، شد البشرة ، توحيد لون الوجه ، المساهمه في منع ظهور حب الشباب ، حماية الجلد من الأشعة الضارة، تفتيح البشرة ، جعل الوجه رطبا ونضرا . يعمل ع إصلاح الخلايا والأنسجة التالفة ،يساعد فى تنعيم وترطيب البشرة ، تجديد خلايا الجلد ، مضاد للإلتهاب ( تقليل الإحمرار والتهيج)",
+            "descEn": "Contains vitamin C, anti-oxidant, fights aging, wrinkles and fine lines, increases the freshness of the skin, contributes to the treatment of dark circles, tightens the skin, unifies the color of the face, contributes to preventing the appearance of acne, protects the skin from harmful rays, lightens the skin, makes the face Wet and luscious. Works on repairing damaged cells and tissues, helping to soften and moisturize the skin, renewing skin cells, anti-inflammatory (reducing redness and irritation)",
+            "contains": ["Vitamin C","Kojic acid","Hyaluronic acid","Glycolic acid","Collagen","Tea tree oil"],
+            "img": "https://res.cloudinary.com/genhub/image/upload/v1636209899/dam_light_ysfxsm.png"
+        },
+        {
+            "slug":"FluroDam",
+            "nameAr": "فلورو دام",
+            "nameEn": "Fluro Dam",
+            "descAr": "مطهر ومسكن وقاتل للبكتريا والميكروبات للفم مزيل لإحتقان الزور ، معطر للفم ، علاج لإلتهابات اللثه ، وعلاج لقرح الفم تخفيف ألم الأسنان ، والعناية بالاسنان، ( فعال ضد التسوس والتهابات الاسنان والتهاب اللثة )",
+            "descEn": "Antiseptic, analgesic, killer of bacteria and microbes in the mouth, decongestant, mouth freshener, treatment of gum infections, treatment of mouth ulcers, relief of dental pain, and dental care, (effective against cavities, dental infections and gingivitis)",
+            "contains": ["Chlorhexidine","Camphor","Clove extract","Menthol","Peppermint oil"],
+            "img": "https://res.cloudinary.com/genhub/image/upload/v1636209899/fluro_dam_ni5pjm.png"
+        }
+    ],
+    "employees": [
+        {
+            "id": "1234",
+            "name": "Mahmoud Atwa",
+            "position": "CEO & Sales Manger",
+            "about": "With more than 10 years of experience, time in which he has changed lives through new smiles on people that useing dam pharm products. Atwa is  updated him self on the latest beauty & health products technology. Atwa apart from being passionate about his professional career, he also enjoys his free time with his family, wife and 2 children",
+            "education": "BS. of Science , Faculty of Benha",
+            "email": "mahmoudsayedatwa@gmail.com",
+            "address": "Bajour / Monifia",
+            "img": "https://res.cloudinary.com/genhub/image/upload/v1635410190/atwa2_s9ii2v.png"
+        }
+    ]
 }

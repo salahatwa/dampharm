@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Dentist } from './../../../dampharm.model';
+import { Dentist, DamPharm, Product } from './../../../dampharm.model';
 import { DamPharmService } from './../../../dampharm.service';
 
 @Component({
@@ -13,16 +13,17 @@ export class HomeOneComponent implements OnInit {
 	dentists: Dentist[] = [];
 	dentistNames = DENTIST_NAMES;
 
+	dampharm: DamPharm;
 
-	constructor(private service: DamPharmService, private router: Router) {
-		this.dentists = this.service.getAllDentists();
+	constructor(private dampharmService: DamPharmService, private router: Router) {
+		// this.dentists = this.service.getAllDentists();
 	}
 	assignDentist(dentistName: string) {
-		this.dentist = this.service.getDentist(dentistName);
+		// this.dentist = this.service.getDentist(dentistName);
 	}
 
 	getAllDentists() {
-		return this.service.getAllDentists();
+		// return this.service.getAllDentists();
 	}
 
 	passDentist() {
@@ -31,7 +32,28 @@ export class HomeOneComponent implements OnInit {
 
 	ngOnInit(): void {
 
+		this.dampharmService.currentUser.subscribe((data) => {
+			this.dampharm = data;
+		});
+
 	}
+
+	getName(product: Product) {
+		if (localStorage.getItem('lang') == 'ar')
+			return product?.nameAr;
+		else
+			return product?.nameEn;
+
+	}
+
+	getDesc(product: Product) {
+		if (localStorage.getItem('lang') == 'ar')
+			return product?.descAr;
+		else
+			return product?.descEn;
+
+	}
+
 }
 export const DENTIST_NAMES = {
 	'dentistAnabel': 'Dra. Anabel Argueta',

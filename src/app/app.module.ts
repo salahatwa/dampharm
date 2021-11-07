@@ -24,6 +24,7 @@ import { DoctorComponent } from './components/pages/doctor/doctor.component';
 import { ErrorComponent } from './components/pages/error/error.component';
 import { HomeOneComponent } from './components/pages/home-one/home-one.component';
 import { ServicesComponent } from './components/pages/services/services.component';
+import { ServiceDetailsComponent } from './components/pages/services/service-details/service-details.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ServicesComponent } from './components/pages/services/services.componen
     AboutComponent,
     ErrorComponent,
     ServicesComponent,
+    ServiceDetailsComponent,
     DoctorDetailsComponent,
     DoctorComponent,
     ContactComponent,
